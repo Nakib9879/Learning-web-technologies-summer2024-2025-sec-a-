@@ -1,0 +1,17 @@
+<!-- form5.html -->
+<form onsubmit="return validateRadio()">
+  <label><input type="radio" name="gender" value="male"> Male</label>
+  <label><input type="radio" name="gender" value="female"> Female</label>
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+function validateRadio() {
+  const radios = document.getElementsByName("gender");
+  for (let radio of radios) {
+    if (radio.checked) return true;
+  }
+  alert("Please select an option");
+  return false;
+}
+</script>

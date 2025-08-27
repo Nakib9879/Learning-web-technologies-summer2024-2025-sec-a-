@@ -1,0 +1,22 @@
+<!-- form6.html -->
+<form onsubmit="return validateDropdown()">
+  <select id="country">
+    <option value="">Select bloodgroup</option>
+    <option value="A+">A+</option>
+    <option value="AB+">AB+</option>
+     <option value="B+">B+</option>
+      <option value="B-">B-</option>
+  </select>
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+function validateDropdown() {
+  const value = document.getElementById("country").value;
+  if (!value) {
+    alert("Please select a country");
+    return false;
+  }
+  return true;
+}
+</script>
